@@ -40,9 +40,9 @@ class Login extends Component {
                     {this.renderAlert()}
                     <button action="submit" className="btn btn-signup">ENTRAR</button>
                     <p>ou entre via</p>
+                  </form>
                     <button className="facebook-sign-in btn">FACEBOOK</button>                      
                     <button className="github-sign-in btn">GITHUB</button>                      
-                  </form>
               </div>              
             </div>
             <Link to="/register"><button className="btn btn-signin">CRIAR NOVA CONTA!</button></Link>

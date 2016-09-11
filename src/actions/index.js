@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { browserHistory } from 'react-router';
 
 import {
   AUTH_USER,
@@ -18,7 +17,7 @@ export function loginUser({ email, password}) {
         dispatch({ type: AUTH_USER});
         // Save the JWT token
         localStorage.setItem('token', response.data.token);
-        browserHistory.push('/console');
+        window.location.href = 'http://console.yaybox.com.br:8081';
     })
     .catch(() => {
       dispatch(loginError('Credenciais inválidas'));
@@ -32,7 +31,7 @@ export function signupUser({ email, password }) {
       .then(response => {
         dispatch({ type: AUTH_USER});
         localStorage.setItem('token', response.data.token);
-        browserHistory.push('/console');
+        window.location.href = 'http://console.yaybox.com.br:8081';
       })
       .catch(error => dispatch(loginError(error.response.data.error)));
   }

@@ -5,8 +5,6 @@ import { Link } from 'react-router';
 class Header extends Component {
 
   render() {
-
-    console.log(this.props.authenticated);
     
     return (
       <div className="navbar-fixed">
@@ -15,14 +13,14 @@ class Header extends Component {
             <div className="nav-wrapper">
               <Link id="logo-container" className="brand-logo" to="/">Yaybox</Link>
                 <ul className="right hide-on-med-and-down">
-                  <li><Link id="recursos" to="/">Recursos</Link></li>
-                  <li><Link id="preco" to="/">Preço</Link></li>
-                  <li><Link id="time" to="/">Time</Link></li>
-                  <li><Link id="login" to={this.props.authenticated ? '/console' : '/register'}><button className="waves-effect waves-light btn">LOGIN / SIGN UP</button></Link></li>
+                  <li><Link to="#intro">Recursos</Link></li>
+                  <li><Link to="#work">Preço</Link></li>
+                  <li><Link to="#team">Time</Link></li>
+                  <li><a href={this.props.authenticated ? 'http://console.yaybox.com.br:8081' : '/register'}><button className="waves-effect waves-light btn">LOGIN / SIGN UP</button></a></li>
                 </ul>
             </div>
           </div>
-        </nav>
+        </nav>               
       </div>
     );
   }
