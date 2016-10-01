@@ -22,7 +22,7 @@ class Register extends Component {
     const { handleSubmit, fields: { email, password }} = this.props;
 
     return (
-      <div className="container register">
+      <div className="register">
           <div className="row">
             <div className="col m6">
               <div className="card darken-1">

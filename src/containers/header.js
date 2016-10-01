@@ -11,7 +11,7 @@ class Header extends Component {
         <nav id="nav_f" className="default_color" role="navigation">
           <div className="container">
             <div className="nav-wrapper">
-              <Link id="logo-container" className="brand-logo" to="/">Yaybox</Link>
+              <Link id="logo-container" className="brand-logo" to="/"><img src="img/logo_yaybox3.png" /></Link>
                 <ul className="right hide-on-med-and-down">
                   <li><Link to="#intro">Recursos</Link></li>
                   <li><Link to="#work">Preço</Link></li>

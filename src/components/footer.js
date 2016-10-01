@@ -1,4 +1,6 @@
 import React from 'react';
+import { sendMail } from '../actions';
+import { connect } from 'react-redux';
 
 const Footer = () => {
   return (
@@ -9,7 +11,7 @@ const Footer = () => {
             <h5 className="white-text">Fale Conosco!</h5>    
           </div>
           <div className="col l6 s12">
-            <form className="col s12" action="contact.php" method="post">
+            <form onSubmit={ () => sendMail() } className="col s12">
                 <div className="row">
                     <div className="input-field col s6">
                         <i className="mdi-action-account-circle prefix white-text"></i>
@@ -27,7 +29,7 @@ const Footer = () => {
                         <label htmlFor="icon_prefix2" className="white-text">Message</label>
                     </div>
                     <div className="col offset-s7 s5">
-                        <button className="btn waves-effect waves-light red darken-1" type="submit">Submit
+                        <button className="btn waves-effect waves-light red darken-1" action="submit">Submit
                             <i className="mdi-content-send right white-text"></i>
                         </button>
                     </div>
@@ -38,17 +40,12 @@ const Footer = () => {
             <h5 className="white-text">Social</h5>
             <ul>
                 <li>
-                    <a className="white-text" href="https://www.behance.net/joashp">
-                        <i className="small fa fa-behance-square white-text"></i> Behance
-                    </a>
-                </li>
-                <li>
-                    <a className="white-text" href="https://www.facebook.com/joash.c.pereira">
+                    <a className="white-text" href="https://www.facebook.com/andrleite">
                         <i className="small fa fa-facebook-square white-text"></i> Facebook
                     </a>
                 </li>
                 <li>
-                    <a className="white-text" href="https://github.com/joashp">
+                    <a className="white-text" href="https://github.com/andrleite">
                         <i className="small fa fa-github-square white-text"></i> Github
                     </a>
                 </li>
@@ -70,4 +67,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default connect(null, {sendMail })(Footer);

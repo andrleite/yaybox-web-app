@@ -21,7 +21,7 @@ class Login extends Component {
   render() {
     const { handleSubmit, fields: { email, password } } = this.props;
     return (
-      <div className="container register">
+      <div className="register">
         <div className="row">
           <div className="col m6">
             <div className="card darken-1">
@@ -54,7 +54,7 @@ class Login extends Component {
 }
 
 function mapStateToProps(state) {
-  return { errorMessage: state.login.error };
+  return { errorMessage: state.login.error }
 }
 
 export default reduxForm({

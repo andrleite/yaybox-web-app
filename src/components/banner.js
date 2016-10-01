@@ -5,11 +5,12 @@ const Banner = () => {
     <div className="section no-pad-bot" id="index-banner">
       <div className="container">
         <h1 className="text_h center header cd-headline letters type">
-          <span>We Love </span> 
-          <span className="cd-words-wrapper waiting">
+          <span>We love </span>
+          <span className="waiting">
             <b className="is-visible">containers</b>
             <b>developing</b>
             <b>automation</b>
+            <b>cloud</b>
           </span>
         </h1>
       </div>
